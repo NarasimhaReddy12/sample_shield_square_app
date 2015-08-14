@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FlapperNews</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.js"></script>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body ng-app="flapperNews">
+    <% shield_square_user_name = "Saravanaselvan SP" %>
+    <% shieldsquare_pid = "" %>
+    <% @shieldsquare_response = Ss2.shieldsquare_ValidateRequest(shield_square_user_name, 1, shieldsquare_pid, request, cookies) %>
+    <div class="row">
+      <%= @shieldsquare_response %>
+      <div class="col-md-6 col-md-offset-3">
+        <ui-view></ui-view>
+      </div>
+    </div>
+    <script>
+      var __uzdbm_a = '<%= @shieldsquare_response["pid"] %>';
+      var __uzdbm_b = '<%= @shieldsquare_response["url"] %>';
+      <%= @shieldsquare_response["dynamic_JS"] %>;
+      (function() {
+          var send = XMLHttpRequest.prototype.send,
+              token = $('meta[name=csrf-token]').attr('content');
+          XMLHttpRequest.prototype.send = function(data) {
+              this.setRequestHeader('X-CSRF-Token', token);
+              return send.apply(this, arguments);
+          };
+      }()); 
+    </script>     
+    <script src="//cdn.perfdrive.com/static/browser_detect_min.js"></script>      
+  </body>
+</html>
