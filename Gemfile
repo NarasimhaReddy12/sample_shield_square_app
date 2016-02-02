@@ -16,9 +16,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'sprockets', '~> 2.0'
 
-gem 'angular-rails-templates'
+gem 'ss2', :path => '/Users/saravanaselvansp/Projects/shield_square_sps'
 
-gem 'ss2', :git => 'https://github.com/saravanaselvan/shield_square'
+gem 'rest-client'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
