@@ -2,7 +2,6 @@
 <html>
   <head>
     <title>FlapperNews</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
     <%= csrf_meta_tags %>
@@ -18,23 +17,23 @@
           <tbody>
             <tr>
               <th>PID</th>
-              <td><%= @shieldsquare_response["pid"] %></td>
+              <td><%= @shieldsquare_response.pid %></td>
             </tr>
             <tr>
               <th>Response Code</th>
-              <td><%= @shieldsquare_response["responsecode"] %></td>
+              <td><%= @shieldsquare_response.responsecode %></td>
             </tr>
             <tr>
               <th>URL</th>
-              <td><%= @shieldsquare_response["url"] %></td>
+              <td><%= @shieldsquare_response.url %></td>
             </tr>
             <tr>
               <th>Reason</th>
-              <td><%= @shieldsquare_response["reason"] %></td>
+              <td><%= @shieldsquare_response.reason %></td>
             </tr>
             <tr>
               <th>dynamic_JS</th>
-              <td><%= @shieldsquare_response["dynamic_JS"] %></td>
+              <td><%= @shieldsquare_response.dynamic_JS %></td>
             </tr>
           </tbody>
         </table>
@@ -48,7 +47,7 @@
       </div>
     </div>
     <script type="text/javascript">
-      var __uzdbm_a = '<%= @shieldsquare_response["pid"] %>';
+      var __uzdbm_a = '<%= @shieldsquare_response.pid %>';
     </script>
     <div id="ss_098786_234239_238479_190541"></div>  
     <script type="text/javascript" src ="https://cdn.perfdrive.com/static/jscall_min.js" async="true">
