@@ -1,0 +1,102 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr>
+          <th>PID</th>
+          <td><%= @shieldsquare_response.pid %></td>
+        </tr>
+        <tr>
+          <th>Response Code</th>
+          <td><%= @shieldsquare_response.responsecode %></td>
+        </tr>
+        <tr>
+          <th>URL</th>
+          <td><%= @shieldsquare_response.url %></td>
+        </tr>
+        <tr>
+          <th>Reason</th>
+          <td><%= @shieldsquare_response.reason %></td>
+        </tr>
+        <tr>
+          <th>dynamic_JS</th>
+          <td><%= @shieldsquare_response.dynamic_JS %></td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table table-striped table-bordered">
+      <tbody>
+        <tr>
+          <th>i0</th>
+          <th>REMOTE_ADDR</th>
+          <td><%= request.headers["REMOTE_ADDR"] %>  </td>
+        </tr>
+        <tr>
+          <th>i1</th>
+          <th>X-Forwarded-For</th>
+          <td><%= request.headers["X-Forwarded-For"] %></td>
+        </tr>
+        <tr>
+          <th>i2</th>
+          <th>HTTP_CLIENT_IP</th>
+          <td><%= request.headers["HTTP_CLIENT_IP"] %>  </td>
+        </tr>
+        <tr>
+          <th>i3</th>
+          <th>HTTP_X_FORWARDED_FOR</th>
+          <td><%= request.headers["HTTP_X_FORWARDED_FOR"] %> </td>
+        </tr>
+        <tr>
+          <th>i4</th>
+          <th>x-real-ip</th>
+          <td><%= request.headers["x-real-ip"] %>  </td>
+        </tr>
+        <tr>
+          <th>i5</th>
+          <th>HTTP_X_FORWARDED</th>
+          <td><%= request.headers["HTTP_X_FORWARDED"] %></td>
+        </tr>
+        <tr>
+          <th>i6</th>
+          <th>Proxy-Client-IP</th>
+          <td><%= request.headers["Proxy-Client-IP"] %></td>
+        </tr>
+        <tr>
+          <th>i7</th>
+          <th>WL-Proxy-Client-IP</th>
+          <td><%= request.headers["WL-Proxy-Client-IP"] %></td>
+        </tr>
+        <tr>
+          <th>i8</th>
+          <th>HTTP_X_FORWARDED</th>
+          <td><%= request.headers["HTTP_X_FORWARDED"] %></td>
+        </tr>
+        <tr>
+          <th>i9</th>
+          <th>HTTP_X_CLUSTER_CLIENT_IP</th>
+          <td><%= request.headers["HTTP_X_CLUSTER_CLIENT_IP"] %></td>
+        </tr>
+        <tr>
+          <th>i10</th>
+          <th>HTTP_FORWARDED_FOR</th>
+          <td><%= request.headers["HTTP_FORWARDED_FOR"] %></td>
+        </tr>
+        <tr>
+          <th>i11</th>
+          <th>HTTP_FORWARDED</th>
+          <td><%= request.headers["HTTP_FORWARDED"] %></td>
+        </tr>
+        <tr>
+          <th>i12</th>
+          <th>HTTP_VIA</th>
+          <td><%= request.headers["HTTP_VIA"] %></td>
+        </tr>
+        <tr>
+          <th>i13</th>
+          <th>X-True-Client-IP</th>
+          <td><%= request.headers["X-True-Client-IP"] %></td>
+        </tr>                
+      </tbody>
+    </table>   
+  </div>
+</div>

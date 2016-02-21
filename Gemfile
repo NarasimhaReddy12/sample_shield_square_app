@@ -20,6 +20,8 @@ gem 'ss2', :path => '/Users/saravanaselvansp/Projects/shield_square_sps'
 
 gem 'rest-client'
 
+gem 'recaptcha', require: 'recaptcha/rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

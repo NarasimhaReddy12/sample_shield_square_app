@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button aria-expanded="false" class="navbar-toggle collapsed" data-target="#bs-example-navbar-collapse-6" data-toggle="collapse" type="button">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+				<span class="icon-bar"/>
+			</button>
+			<a class="navbar-brand" href="/"><img src="https://cdn.perfdrive.com/icons/shieldsquarelogo.png" style="margin-left: -8px;margin-right: -8px;width: 170px;margin-top: -13px;height:40px;"></a>
+		</div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6">
+			<ul class="nav navbar-nav">
+				<li class="<%= 'active' if request.path_info == '/' %>">
+					<a href="/">Home</a>
+				</li>
+				<li class="<%= 'active' if request.path_info == '/captcha' %>">
+					<a href="/captcha">Captcha</a>
+				</li>
+				<li class="<%= 'active' if request.path_info == '/secure_page' %>">
+					<a href="/secure_page">Secure Page</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,5 @@
+<%= form_tag validate_captcha_path do |f|%>
+  <!-- <div class="g-recaptcha" data-sitekey="6Ld23BYTAAAAADuWnWn5sPKW69RS_GigjPSSAsTP" data-type="image"></div> -->
+  <%= recaptcha_tags %>
+  <input type="submit" value="Submit" class="btn btn-primary">
+<% end %>
