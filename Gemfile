@@ -16,7 +16,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'sprockets', '~> 2.0'
 
-gem 'ss2', :path => '/Users/saravanaselvansp/Projects/shield_square_sps'
+gem 'ss2', :path => 'https://github.com/saravanaselvan/shield_square'
 
 gem 'rest-client'
 
