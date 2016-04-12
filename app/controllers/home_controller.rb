@@ -19,6 +19,6 @@ class HomeController < ApplicationController
 private
 	def set_captcha_call_type
 		session[:captcha_response] = nil
-		@shieldsquare_call_type = Ss2::CAPTCHA_PAGE
+		@shieldsquare_call_type = 4
 	end
 end
