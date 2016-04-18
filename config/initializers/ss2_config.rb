@@ -5,35 +5,35 @@ Ss2.setup do |config|
 	#North America - ss_scus.shieldsquare.net
 	#Europe - ss_ew.shieldsquare.net
 	#Australia - ss_au.shieldsquare.net
-	config.ss2_domain = 'ss_sa.shieldsquare.net'
+	config.ss2_domain = 'ss_scus.shieldsquare.net'
 
-	# if Rails.env.production?
+	if Rails.env.production?
 		#Enter your SID
-	config.sid = "156d6b94-ee8e-4056-95b0-97c03ae585fc"
+		config.sid = "156d6b94-ee8e-4056-95b0-97c03ae585fc"
 
-	#Please specify the mode in which you want to operate
-	#mode = 'Active'
-	#mode = 'Monitor'
-	config.mode = 'Active'
+		#Please specify the mode in which you want to operate
+		#mode = 'Active'
+		#mode = 'Monitor'
+		config.mode = 'Active'
 
-	#Asynchronous HTTP Data Post  
-	#Setting this value to true will reduce the page load time when you are in Monitor mode. 
-	#Note: Enable this only if you are hosting your applications on Linux environments. 
-	config.async_http_post = false
-	# else
-	# 	#Enter your SID
-	# 	config.sid = "77a4362b-d035-4d7b-afb3-6050be9e0738"
+		#Asynchronous HTTP Data Post  
+		#Setting this value to true will reduce the page load time when you are in Monitor mode. 
+		#Note: Enable this only if you are hosting your applications on Linux environments. 
+		config.async_http_post = false
+	else
+		#Enter your SID
+		config.sid = "156d6b94-ee8e-4056-95b0-97c03ae585fc"
 
-	# 	#Please specify the mode in which you want to operate
-	# 	#mode = 'Active'
-	# 	#mode = 'Monitor'
-	# 	config.mode = 'Monitor'
+		#Please specify the mode in which you want to operate
+		#mode = 'Active'
+		#mode = 'Monitor'
+		config.mode = 'Monitor'
 
-	# 	#Asynchronous HTTP Data Post  
-	# 	#Setting this value to true will reduce the page load time when you are in Monitor mode. 
-	# 	#Note: Enable this only if you are hosting your applications on Linux environments. 
-	# 	config.async_http_post = true		
-	# end
+		#Asynchronous HTTP Data Post  
+		#Setting this value to true will reduce the page load time when you are in Monitor mode. 
+		#Note: Enable this only if you are hosting your applications on Linux environments. 
+		config.async_http_post = true		
+	end
 
 	#* Timeout in Seconds or Milliseconds
 	config.timeout_value = 500
@@ -44,4 +44,22 @@ Ss2.setup do |config|
 	config._ipaddr = "REMOTE_ADDR"
 
 	config._deployment_number = "deployment_number"
+
+
+	# 
+	# Set the DNS cache time in seconds
+	# Default is one hour
+	# Set -1 to disable caching
+	# Note: To use this feature your application server [Apache/Nginx] 
+	# should have write access to folder specified in domain_cache_file. 
+	config.domain_ttl = 3600
+
+
+	# Set DNS Cache file path
+	# Default is /dev/shm/ folder.
+	# Note: To use this feature your application server [Apache/Nginx] 
+	# should have write access to folder specified. 
+	# Also add '/' in the end of the path 
+	# eg. /dev/shm/
+	config.domain_cache_file = '/Users/saravanaselvansp/dev/shm/'
 end
