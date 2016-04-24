@@ -5,7 +5,7 @@ Ss2.setup do |config|
 	#North America - ss_scus.shieldsquare.net
 	#Europe - ss_ew.shieldsquare.net
 	#Australia - ss_au.shieldsquare.net
-	config.ss2_domain = 'ss_scus.shieldsquare.net'
+	config.ss2_domain = 'ss_sandbox.shieldsquare.net'
 
 	if Rails.env.production?
 		#Enter your SID
@@ -27,16 +27,16 @@ Ss2.setup do |config|
 		#Please specify the mode in which you want to operate
 		#mode = 'Active'
 		#mode = 'Monitor'
-		config.mode = 'Monitor'
+		config.mode = 'Active'
 
 		#Asynchronous HTTP Data Post  
 		#Setting this value to true will reduce the page load time when you are in Monitor mode. 
 		#Note: Enable this only if you are hosting your applications on Linux environments. 
-		config.async_http_post = true		
+		config.async_http_post = false		
 	end
 
 	#* Timeout in Seconds or Milliseconds
-	config.timeout_value = 500
+	config.timeout_value = 1000
 
 	#* Enter the URL for the JavaScript Data Collector
 	config.js_url = '/getData'
@@ -61,5 +61,5 @@ Ss2.setup do |config|
 	# should have write access to folder specified. 
 	# Also add '/' in the end of the path 
 	# eg. /dev/shm/
-	config.domain_cache_file = '/Users/saravanaselvansp/dev/shm/'
+	config.domain_cache_file = '/dev/shm/'
 end

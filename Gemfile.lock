@@ -1,5 +1,6 @@
-PATH
-  remote: /Users/saravanaselvansp/Projects/shield_square_sps
+GIT
+  remote: https://github.com/saravanaselvan/shield_square
+  revision: 793740c2f181b3b25da3abe93af073774bbc90c7
   specs:
     ss2 (0.0.4)
       addressable
