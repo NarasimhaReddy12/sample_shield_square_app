@@ -5,38 +5,23 @@ Ss2.setup do |config|
 	#North America - ss_scus.shieldsquare.net
 	#Europe - ss_ew.shieldsquare.net
 	#Australia - ss_au.shieldsquare.net
-	config.ss2_domain = 'ss_sandbox.shieldsquare.net'
+	config.ss2_domain = 'ss_sa.shieldsquare.net'
 
-	if Rails.env.production?
-		#Enter your SID
-		config.sid = "156d6b94-ee8e-4056-95b0-97c03ae585fc"
+	#Enter your SID
+	config.sid = "156d6b94-ee8e-4056-95b0-97c03ae585fc"
 
-		#Please specify the mode in which you want to operate
-		#mode = 'Active'
-		#mode = 'Monitor'
-		config.mode = 'Active'
+	#Please specify the mode in which you want to operate
+	#mode = 'Active'
+	#mode = 'Monitor'
+	config.mode = 'Monitor'
 
-		#Asynchronous HTTP Data Post  
-		#Setting this value to true will reduce the page load time when you are in Monitor mode. 
-		#Note: Enable this only if you are hosting your applications on Linux environments. 
-		config.async_http_post = false
-	else
-		#Enter your SID
-		config.sid = "156d6b94-ee8e-4056-95b0-97c03ae585fc"
-
-		#Please specify the mode in which you want to operate
-		#mode = 'Active'
-		#mode = 'Monitor'
-		config.mode = 'Active'
-
-		#Asynchronous HTTP Data Post  
-		#Setting this value to true will reduce the page load time when you are in Monitor mode. 
-		#Note: Enable this only if you are hosting your applications on Linux environments. 
-		config.async_http_post = false		
-	end
+	#Asynchronous HTTP Data Post  
+	#Setting this value to true will reduce the page load time when you are in Monitor mode. 
+	#Note: Enable this only if you are hosting your applications on Linux environments. 
+	config.async_http_post = true
 
 	#* Timeout in Seconds or Milliseconds
-	config.timeout_value = 1000
+	config.timeout_value = 500
 
 	#* Enter the URL for the JavaScript Data Collector
 	config.js_url = '/getData'
